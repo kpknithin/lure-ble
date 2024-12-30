@@ -3,12 +3,8 @@ workflows:
     name: Android Build
     max_build_duration: 200
     environment:
-      vars:
-        GRADLE_TASK: "assembleDebug"
-      android:
-        image: android-latest
-      java:
-        version: jdk11
+      flutter: stable
+      java: 11
     scripts:
       - echo "Starting the build process..."
       - chmod +x ./gradlew
